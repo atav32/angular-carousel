@@ -1,4 +1,4 @@
-angular-carousel
+Angular Carousel
 ================
 
-AngularJS Carousel Directive
+Practicing making an picture carousel directive.
