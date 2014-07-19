@@ -1,6 +1,7 @@
 carouselDemo.directive('carousel', function() {
     var directive = {
-        templateUrl: './directives/carousel.html'
+        restrict: 'E',
+        templateUrl: 'src/directives/carousel.html'
     };
     return directive;
 });
