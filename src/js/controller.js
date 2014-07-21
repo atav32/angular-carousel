@@ -10,7 +10,6 @@ carouselDemo.controller('CarouselController', function($scope, $attrs, $animate)
     ];
     $scope.imageIndex = 0;
     $scope.image = $scope.images[$scope.imageIndex];
-    console.log($scope);
 
     $scope.nextImage = function(indexChange) {
         $scope.imageIndex += indexChange;
@@ -20,7 +19,6 @@ carouselDemo.controller('CarouselController', function($scope, $attrs, $animate)
         if ($scope.imageIndex > $scope.images.length-1) {
             $scope.imageIndex = 0;
         }
-        console.log($scope.imageIndex);
         $scope.image = $scope.images[$scope.imageIndex];
     }
 });
