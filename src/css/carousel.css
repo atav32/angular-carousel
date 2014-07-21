@@ -35,34 +35,48 @@ body {
 }
 
 .button {
-    width: 32px;
-    height: 32px;
+    width: 64px;
+    height: 64px;
     
     position: absolute;
     margin: auto;
     top: 0; left: 0; bottom: 0; right: 0;
 
     font-size: 56px;
-    color: #EEEEEE;
+    color: #DDDDDD;
     text-align: center;
+    vertical-align: middle;
     text-shadow: 0 0 10px #000000;
 
     cursor: pointer;
+
+    transition-duration: 0.1s;
+    transition-property: text-shadow;
 
     z-index: 9000;
 }
 
 .button:hover {
     color: #FFFFFF;
-    text-shadow: 0 0 20px #000000;
+    text-shadow: 0 0 10px #FFFFFF;
 }
 
 .button.left {
     right: auto; 
-    left: 20px;
+    left: 10px;
 }
 
 .button.right {
-    right: 20px; 
+    right: 10px; 
     left: auto;
+}
+
+.grow {
+    transition-duration: 0.2s;
+    transition-property: transform;
+    transform: translateZ(0);
+}
+
+.grow:hover, .grow:focus, .grow:active {
+    transform: scale(1.1);
 }
