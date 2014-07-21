@@ -1,11 +1,15 @@
-<div class="carousel">
-    <div class="button left">
+<div class="carousel" ng-controller="CarouselController">
+    <div class="button left" ng-click="">
+        <span class="chevron">
         <
+        </span>
     </div>
     <div class="button right">
+        <span class="chevron">
         >
+        </span>
     </div>
-    <div class="image-container" ng-repeat="image in images">
+    <div class="image-container">
         <img class="image" ng-src={{image.url}}></img>
     </div>
 </div>
