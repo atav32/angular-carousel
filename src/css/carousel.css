@@ -9,18 +9,21 @@ body {
 }
 
 .carousel {
-    width: 640px;
-    height: 480px;
+    width: 480px;
+    height: 320px;
      
     position: relative;
 
     border-radius: 10px;
     box-shadow: 0 0 10px #000000;
+    margin: 10px;
+
+    display: inline-block;
 }
 
 .image-container {
-    width: 640px;
-    height: 480px;
+    width: 480px;
+    height: 320px;
 
     position: relative;    
     overflow: hidden;
@@ -30,8 +33,9 @@ body {
 
 .image {
     position: absolute;
-    margin: auto;
-    top: 0; left: 0; bottom: 0; right: 0;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translateY(-50%) translateX(-50%);
 }
 
 .button {
