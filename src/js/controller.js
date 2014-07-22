@@ -1,4 +1,4 @@
-carouselDemo.controller('CarouselController', function($scope, $attrs, $animate) {
+carouselDemo.controller('CarouselController', function($scope, $element, $attrs, $animate) {
     $scope.images = [
         {url: "http://i.imgur.com/quHwgVX.jpg"},
         {url: "http://i.imgur.com/FLy7RLo.jpg"},

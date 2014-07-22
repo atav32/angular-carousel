@@ -10,6 +10,6 @@
         </span>
     </div>
     <div class="image-container">
-        <img class="image" ng-src={{image.url}}></img>
+        <img ng-repeat="image in images" class="center-image" ng-src={{image.url}}></img>
     </div>
 </div>

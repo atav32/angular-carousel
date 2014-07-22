@@ -1,11 +1,11 @@
 body {
-    // No highlighting
-    -webkit-touch-callout: none;
-    -webkit-user-select: none;
-    -khtml-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
+    /* No highlighting */
     user-select: none;
+    -ms-user-select: none;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -webkit-touch-callout: none;
 }
 
 .carousel {
@@ -31,10 +31,13 @@ body {
     border-radius: 10px;
 }
 
-.image {
+.center-image {
+    /* Center image ever if it's larger than the container */
     position: absolute;
     left: 50%;
     top: 50%;
+    transform: translateY(-50%) translateX(-50%);
+    -moz-transform: translateY(-50%) translateX(-50%);
     -webkit-transform: translateY(-50%) translateX(-50%);
 }
 
@@ -76,11 +79,23 @@ body {
 }
 
 .grow {
-    transition-duration: 0.2s;
+    --duration: 0.2s;
+    transition-duration: --duration;
+    -moz-transition-duration: --duration;
+    -webkit-transition-duration: --duration;
+
     transition-property: transform;
+    -moz-transition-property: transform;
+    -webkit-transition-property: transform;
+
     transform: translateZ(0);
+    -moz-transform: translateZ(0);
+    -webkit-transform: translateZ(0);
 }
 
 .grow:hover, .grow:focus, .grow:active {
-    transform: scale(1.1);
+    --grow-scale: 1.1;
+    transform: scale(--grow-scale);
+    -moz-transform: scale(--grow-scale);
+    -webkit-transform: scale(--grow-scale);
 }
