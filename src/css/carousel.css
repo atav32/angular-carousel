@@ -19,16 +19,38 @@ body {
     margin: 10px;
 
     display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
 }
 
 .image-container {
     width: 480px;
     height: 320px;
 
-    position: relative;    
-    overflow: hidden;
+    position: relative;
+    display: inline-block;
+
+    //position: absolute;    
+    //overflow: hidden;
 
     border-radius: 10px;
+}
+
+.slide {
+    --duration: 0.2s;
+    transition-duration: --duration;
+    -moz-transition-duration: --duration;
+    -webkit-transition-duration: --duration;
+
+    transition-property: transform;
+    -moz-transition-property: transform;
+    -webkit-transition-property: transform;
+}
+
+.slide.left {
+    transform: translateX(-100%);
+    -moz-transform: translateX(-100%);
+    -webkit-transform: translateX(-100%);
 }
 
 .center-image {

@@ -9,7 +9,7 @@
         >
         </span>
     </div>
-    <div class="image-container">
-        <img ng-repeat="image in images" class="center-image" ng-src={{image.url}}></img>
+    <div ng-repeat="image in images" class="image-container" ng-show="$index == imageIndex">
+        <img class="center-image" ng-src={{image.url}}></img>
     </div>
 </div>
