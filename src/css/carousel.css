@@ -30,17 +30,15 @@ body {
     position: relative;
     display: inline-block;
 
-    //position: absolute;    
-    //overflow: hidden;
+    overflow: hidden;
 
     border-radius: 10px;
 }
 
 .slide {
-    --duration: 0.2s;
-    transition-duration: --duration;
-    -moz-transition-duration: --duration;
-    -webkit-transition-duration: --duration;
+    transition-duration: 0.2s;
+    -moz-transition-duration: 0.2s;
+    -webkit-transition-duration: 0.2s;
 
     transition-property: transform;
     -moz-transition-property: transform;
@@ -51,6 +49,12 @@ body {
     transform: translateX(-100%);
     -moz-transform: translateX(-100%);
     -webkit-transform: translateX(-100%);
+}
+
+.slide.right {
+    transform: translateX(100%);
+    -moz-transform: translateX(100%);
+    -webkit-transform: translateX(100%);
 }
 
 .center-image {
@@ -101,10 +105,9 @@ body {
 }
 
 .grow {
-    --duration: 0.2s;
-    transition-duration: --duration;
-    -moz-transition-duration: --duration;
-    -webkit-transition-duration: --duration;
+    transition-duration: 0.2s;
+    -moz-transition-duration: 0.2s;
+    -webkit-transition-duration: 0.2s;
 
     transition-property: transform;
     -moz-transition-property: transform;

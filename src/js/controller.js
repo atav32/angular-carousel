@@ -9,8 +9,10 @@ carouselDemo.controller('CarouselController', function($scope, $element, $attrs,
         {url: "http://i.imgur.com/RInOfZp.jpg"}
     ];
     $scope.imageIndex = 0;
+    $scope.sliding = false;
 
     $scope.nextImage = function(indexChange) {
+        $scope.sliding = true;
         $scope.imageIndex += indexChange;
         if ($scope.imageIndex < 0) {
             $scope.imageIndex = $scope.images.length-1;
@@ -18,6 +20,7 @@ carouselDemo.controller('CarouselController', function($scope, $element, $attrs,
         if ($scope.imageIndex > $scope.images.length-1) {
             $scope.imageIndex = 0;
         }
+        $scope.sliding = false;
     }
 
     $scope.setPosition = function(index) {
