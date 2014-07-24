@@ -28,7 +28,6 @@ body {
     height: 320px;
 
     position: absolute;
-    //display: inline-block;
 
     overflow: hidden;
 
@@ -36,9 +35,13 @@ body {
 }
 
 .slide {
-    transition-duration: 0.2s;
-    -moz-transition-duration: 0.2s;
-    -webkit-transition-duration: 0.2s;
+    transition-duration: 0.3s;
+    -moz-transition-duration: 0.3s;
+    -webkit-transition-duration: 0.3s;
+
+    transition-timing-function: ease-in-out;
+    -moz-transition-timing-function: ease-in-out;
+    -webkit-transition-timing-function: ease-in-out;
 
     transition-property: transform;
     -moz-transition-property: transform;
@@ -111,9 +114,9 @@ body {
 }
 
 .grow {
-    transition-duration: 0.2s;
-    -moz-transition-duration: 0.2s;
-    -webkit-transition-duration: 0.2s;
+    transition-duration: 0.3s;
+    -moz-transition-duration: 0.3s;
+    -webkit-transition-duration: 0.3s;
 
     transition-property: transform;
     -moz-transition-property: transform;
