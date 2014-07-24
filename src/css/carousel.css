@@ -27,8 +27,8 @@ body {
     width: 480px;
     height: 320px;
 
-    position: relative;
-    display: inline-block;
+    position: absolute;
+    //display: inline-block;
 
     overflow: hidden;
 
@@ -45,13 +45,19 @@ body {
     -webkit-transition-property: transform;
 }
 
-.slide.left {
+.slide.active {
+    transform: translateX(0%);
+    -moz-transform: translateX(0%);
+    -webkit-transform: translateX(0%);
+}
+
+.slide.previous {
     transform: translateX(-100%);
     -moz-transform: translateX(-100%);
     -webkit-transform: translateX(-100%);
 }
 
-.slide.right {
+.slide.next {
     transform: translateX(100%);
     -moz-transform: translateX(100%);
     -webkit-transform: translateX(100%);

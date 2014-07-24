@@ -8,25 +8,31 @@ carouselDemo.controller('CarouselController', function($scope, $element, $attrs,
         {url: "http://i.imgur.com/axa1eW0.jpg"},
         {url: "http://i.imgur.com/RInOfZp.jpg"}
     ];
-    $scope.imageIndex = 0;
-    $scope.sliding = false;
+    $scope.previousIndex = $scope.images.length-1;
+    $scope.activeIndex = 0;
+    $scope.nextIndex = 1;
 
     $scope.nextImage = function(indexChange) {
-        $scope.sliding = true;
-        $scope.imageIndex += indexChange;
-        if ($scope.imageIndex < 0) {
-            $scope.imageIndex = $scope.images.length-1;
+        $scope.previousIndex += indexChange;
+        $scope.activeIndex += indexChange;
+        $scope.nextIndex += indexChange;
+        if ($scope.previousIndex < 0) {
+            $scope.previousIndex = $scope.images.length-1;
         }
-        if ($scope.imageIndex > $scope.images.length-1) {
-            $scope.imageIndex = 0;
+        if ($scope.activeIndex < 0) {
+            $scope.activeIndex = $scope.images.length-1;
         }
-        $scope.sliding = false;
-    }
-
-    $scope.setPosition = function(index) {
-        leftPosition = (index-$scope.imageIndex)*100;
-        console.log(leftPosition);
-        console.log($element);
-        //$element.css('left', leftPosition + '%');
+        if ($scope.nextIndex < 0) {
+            $scope.nextIndex = $scope.images.length-1;
+        }
+        if ($scope.previousIndex > $scope.images.length-1) {
+            $scope.previousIndex = 0;
+        }
+        if ($scope.activeIndex > $scope.images.length-1) {
+            $scope.activeIndex = 0;
+        }
+        if ($scope.nextIndex > $scope.images.length-1) {
+            $scope.nextIndex = 0;
+        }
     }
 });
