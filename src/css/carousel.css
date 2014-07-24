@@ -27,30 +27,40 @@ body {
     width: 480px;
     height: 320px;
 
-    position: relative;
-    display: inline-block;
+    position: absolute;
+    //display: inline-block;
 
-    //position: absolute;    
-    //overflow: hidden;
+    overflow: hidden;
 
     border-radius: 10px;
 }
 
 .slide {
-    --duration: 0.2s;
-    transition-duration: --duration;
-    -moz-transition-duration: --duration;
-    -webkit-transition-duration: --duration;
+    transition-duration: 0.2s;
+    -moz-transition-duration: 0.2s;
+    -webkit-transition-duration: 0.2s;
 
     transition-property: transform;
     -moz-transition-property: transform;
     -webkit-transition-property: transform;
 }
 
-.slide.left {
+.slide.active {
+    transform: translateX(0%);
+    -moz-transform: translateX(0%);
+    -webkit-transform: translateX(0%);
+}
+
+.slide.previous {
     transform: translateX(-100%);
     -moz-transform: translateX(-100%);
     -webkit-transform: translateX(-100%);
+}
+
+.slide.next {
+    transform: translateX(100%);
+    -moz-transform: translateX(100%);
+    -webkit-transform: translateX(100%);
 }
 
 .center-image {
@@ -101,10 +111,9 @@ body {
 }
 
 .grow {
-    --duration: 0.2s;
-    transition-duration: --duration;
-    -moz-transition-duration: --duration;
-    -webkit-transition-duration: --duration;
+    transition-duration: 0.2s;
+    -moz-transition-duration: 0.2s;
+    -webkit-transition-duration: 0.2s;
 
     transition-property: transform;
     -moz-transition-property: transform;
