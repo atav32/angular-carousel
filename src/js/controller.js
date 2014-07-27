@@ -13,26 +13,18 @@ carouselDemo.controller('CarouselController', function($scope, $element, $attrs,
     $scope.nextIndex = 1;
 
     $scope.nextImage = function(indexChange) {
-        $scope.previousIndex += indexChange;
-        $scope.activeIndex += indexChange;
-        $scope.nextIndex += indexChange;
-        if ($scope.previousIndex < 0) {
-            $scope.previousIndex = $scope.images.length-1;
-        }
-        if ($scope.activeIndex < 0) {
-            $scope.activeIndex = $scope.images.length-1;
-        }
-        if ($scope.nextIndex < 0) {
-            $scope.nextIndex = $scope.images.length-1;
-        }
-        if ($scope.previousIndex > $scope.images.length-1) {
-            $scope.previousIndex = 0;
-        }
-        if ($scope.activeIndex > $scope.images.length-1) {
-            $scope.activeIndex = 0;
-        }
-        if ($scope.nextIndex > $scope.images.length-1) {
-            $scope.nextIndex = 0;
+        $scope.activeIndex = loopIndex($scope.activeIndex + indexChange);
+        $scope.previousIndex = loopIndex($scope.activeIndex - 1);
+        $scope.nextIndex = loopIndex($scope.activeIndex + 1);
+
+        function loopIndex(index) {
+            if (index < 0) {
+                index = $scope.images.length-1;
+            }
+            if (index > $scope.images.length-1) {
+                index = 0;
+            }
+            return index;
         }
     }
 });
