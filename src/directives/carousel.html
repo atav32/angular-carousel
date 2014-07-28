@@ -1,15 +1,21 @@
 <div class="carousel" ng-controller="CarouselController">
-    <div class="button left grow" ng-click="nextImage(-1)">
-        <span class="chevron">
-        <
-        </span>
+    <div class="frame">
+        <div class="button left grow" ng-click="nextImage(-1)">
+            <span class="chevron">
+            <
+            </span>
+        </div>
+        <div class="button right grow" ng-click="nextImage(1)">
+            <span class="chevron">
+            >
+            </span>
+        </div>
+        <div ng-repeat="image in images" class="image-container slide" ng-class="{active: $index==activeIndex, previous: $index==previousIndex, next: $index==nextIndex}" ng-show="$index==previousIndex || $index==activeIndex || $index == nextIndex">
+            <img class="center-image" ng-src={{image.url}}></img>
+        </div>
     </div>
-    <div class="button right grow" ng-click="nextImage(1)">
-        <span class="chevron">
-        >
-        </span>
-    </div>
-    <div ng-repeat="image in images" class="image-container slide" ng-class="{active: $index==activeIndex, previous: $index==previousIndex, next: $index==nextIndex}" ng-show="$index==previousIndex || $index==activeIndex || $index == nextIndex">
-        <img class="center-image" ng-src={{image.url}}></img>
-    </div>
+    <form class="new-image" ng-submit="addImage()">
+        <input type="text" class="image-input" ng-model="newImageURL" ng-pattern="/(https?:\/\/.*\.(?:png|jpg))/" placeholder="Add a new image URL">
+        <input class="btn-primary" type="submit" value="Add">
+    </form>
 </div>

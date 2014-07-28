@@ -9,14 +9,18 @@ body {
 }
 
 .carousel {
+    display: inline-block;
+    margin: 10px;
+}
+
+.frame {
     width: 480px;
     height: 320px;
      
     position: relative;
 
     border-radius: 10px;
-    box-shadow: 0 0 10px #000000;
-    margin: 10px;
+    box-shadow: 0 0 3px #000000;
 
     display: inline-block;
     overflow: hidden;
@@ -130,4 +134,51 @@ body {
     transform: scale(--grow-scale);
     -moz-transform: scale(--grow-scale);
     -webkit-transform: scale(--grow-scale);
+}
+
+.new-image {
+    display: block; 
+
+    margin-top: 10px;
+}
+
+.image-input {
+    display: inline-block;
+
+    width: 80%;
+    margin-right: 10px;
+
+    border-radius: 5px;
+    border: 1px #AAAAAA solid;
+
+    font-size: 12pt;
+    padding: 8px;
+}
+
+.btn-primary {
+    /* Bootstrap */
+    display: inline-block;
+
+    width: 13%;
+
+    padding: 8px;
+
+    background-color: #0074CC;
+    background-image: -webkit-linear-gradient(top, #0088CC, #0055CC);
+    background-repeat: repeat-x;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+
+    border: 0px solid #CCCCCC;
+    border-radius: 5px;
+
+    cursor: pointer;
+    -webkit-appearance: button;
+
+    color: #FFFFFF;
+    font-size: 12pt;
+}
+
+.btn-primary:hover {
+    background-color: #1A9CFF;
+    background-image: -webkit-linear-gradient(top, #00AAFF, #006AFF);
 }

@@ -27,4 +27,15 @@ carouselDemo.controller('CarouselController', function($scope, $element, $attrs,
             return index;
         }
     }
+
+    $scope.addImage = function() {
+        console.log($scope.newImageURL);
+        if ($scope.newImageURL !== undefined && $scope.newImageURL !== "") {
+            newImage = {
+                url: $scope.newImageURL
+            }
+            $scope.images.splice($scope.activeIndex, 0, newImage);
+            console.log($scope.images);
+        }
+    }
 });
