@@ -10,7 +10,7 @@
             >
             </span>
         </div>
-        <div ng-repeat="image in images" class="image-container slide" ng-class="{active: $index==activeIndex, previous: $index==previousIndex, next: $index==nextIndex}" ng-show="$index==previousIndex || $index==activeIndex || $index == nextIndex">
+        <div ng-repeat="image in images" class="image-container slide" ng-swipe-left="nextImage(1)" ng-swipe-right="nextImage(-1)" ng-class="{active: $index==activeIndex, previous: $index==previousIndex, next: $index==nextIndex}" ng-show="$index==previousIndex || $index==activeIndex || $index == nextIndex">
             <img class="center-image" ng-src={{image.url}}></img>
         </div>
     </div>
