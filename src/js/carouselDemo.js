@@ -1,1 +1,1 @@
-var carouselDemo = angular.module('CarouselDemo', ['ngTouch']);
+var carouselDemo = angular.module('carouselDemo', ['ngTouch']);
