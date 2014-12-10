@@ -1,6 +1,6 @@
 carouselDemo.directive('carousel', function() {
     var directive = {
-        restrict: 'E',
+        restrict: 'AE',
         controller: 'CarouselController',
         templateUrl: 'src/directives/carousel.html',
     };
